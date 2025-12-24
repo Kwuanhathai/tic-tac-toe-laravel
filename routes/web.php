@@ -20,7 +20,6 @@ Route::get('/login/google/callback', [GoogleController::class, 'callback']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/game', [GameController::class, 'index']);
-    Route::post('/game/play', [GameController::class, 'play']);
     Route::post('/game/score', [GameController::class, 'updateScore']);
     Route::get('/scoreboard', [ScoreController::class, 'index']);
 });
